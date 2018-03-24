@@ -1,0 +1,10 @@
+query information($site: String, $link: String) {
+    information(site: $site, link: $link) {
+        id
+        site
+        link
+        username
+        password
+        user_id
+    }
+}

@@ -1,0 +1,24 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type User {
+  id: Int
+  email: String
+  username: String
+  password: String
+  firstName: String
+  lastName: String
+  active: Boolean
+}
+
+type Query {
+  verifyToken(token: String): User
+  login(username: String, password: String): User
+}
+
+type Mutation {
+  register(email: String, username: String, password: String, firstName: String, lastName: String): JSON
+  updateUser(id: Int!, email: String, password: String, firstName: String, lastName: String, active: Boolean): User
+}

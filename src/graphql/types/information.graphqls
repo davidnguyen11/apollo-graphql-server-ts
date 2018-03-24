@@ -1,0 +1,21 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Information {
+  id: Int
+  site: String
+  link: String
+  username: String
+  password: String
+  userId: Int
+}
+
+type Query {
+  information(site: String, link: String): Information
+}
+
+type Mutation {
+  createItem(site: String, link: String, username: String, password: String, userId: Int): Information
+}
